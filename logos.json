@@ -1,0 +1,15 @@
+{
+    "Java": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+    "MySQL": "https://www.mysql.com/common/logos/logo-mysql-170x115.png",
+    "React": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    "Hibernate": "https://hibernate.org/images/hibernate-logo.svg",
+    "Java8": "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/java/java.svg",
+    "JavaScript": "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/javascript/javascript.svg",
+    "SpringBoot": "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg",
+    "Microservices": "https://miro.medium.com/v2/resize:fit:1400/1*2hMe-phi5hO5gI8OXY8-ZQ.png",
+    "RESTfulAPI": "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/rest-api-icon.svg",
+   "AWS": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+    "LinkedIn": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
+    "GitHub": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    "LeetCode": "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+}
