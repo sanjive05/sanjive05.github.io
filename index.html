@@ -1,113 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjive - Software Developer</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjive — Backend Java Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Sanjive</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#" id="resumeLink" target="_blank">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Sanjive</h1>
-            <p>A Software Developer passionate about crafting efficient and scalable solutions.</p>
-            <div class="social-links-hero" id="socialLinks">
-                <div data-skill="LinkedIn"><span class="logo-placeholder"></span></div>
-                <div data-skill="GitHub"><span class="logo-placeholder"></span></div>
-                <div data-skill="LeetCode"><span class="logo-placeholder"></span></div>
-            </div>
-            <a href="#contact" class="button">Get in Touch</a>
-            <div class="resume-download">
-                <a href="#" id="heroResumeLink" class="button" target="_blank">Download Resume</a>
-            </div>
+  <!-- NAV -->
+  <header class="nav-header">
+    <nav>
+      <div class="logo"><span class="logo-bracket">{</span>SJ<span class="logo-bracket">}</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <a href="https://raw.githubusercontent.com/sanjive05/resume/main/sanjive_resume_2026.pdf"
+         class="nav-resume-btn" target="_blank" download>
+        <span class="mono">↓</span> resume.pdf
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <canvas id="dotCanvas" class="dot-canvas"></canvas>
+    <div class="hero-inner">
+
+      <div class="terminal-bar">
+        <span class="t-dot t-red"></span>
+        <span class="t-dot t-yellow"></span>
+        <span class="t-dot t-green"></span>
+        <span class="t-path mono">~/sanjive/portfolio</span>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow mono"><span class="prompt">$</span> whoami <span class="cursor-blink">█</span></p>
+        <h1 class="hero-title">
+          <span class="title-dim">Backend</span><br/>
+          Java<br/>
+          <span class="title-accent">Developer</span>
+        </h1>
+        <p class="hero-sub mono">
+          <span class="kw">class</span> Sanjive <span class="kw">extends</span> Engineer {<br/>
+          &nbsp;&nbsp;stack: <span class="str">"Java · Spring Boot · Microservices"</span>;<br/>
+          &nbsp;&nbsp;exp: <span class="num">3.5</span>+ years;<br/>
+          &nbsp;&nbsp;status: <span class="str">"Open to Work"</span>;<br/>
+          }
+        </p>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/sanjive-subramaniam/" target="_blank" class="social-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/sanjive05" target="_blank" class="social-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="https://leetcode.com/u/sanjive05/" target="_blank" class="social-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+            LeetCode
+          </a>
         </div>
-    </section>
 
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Software developer with 2.7 years of experience in designing and developing robust backend applications using Spring Boot, REST APIs, and SQL. Skilled in object-oriented programming, API integration, microservices architecture, and database management. Proficient in Agile methodologies with hands-on experience in Python for generative AI implementations, focusing on delivering efficient and scalable solutions. Thrives in collaborative environments and eager to contribute to innovative solutions that enhance business processes.</p>
-        <p>Currently based in Chennai, I was previously a Software Engineer at Infosys from October 2022 to April 2025.</p>
-        <p>Feel free to connect!</p>
-    </section>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">Get in Touch</a>
+          <a href="https://raw.githubusercontent.com/sanjive05/resume/main/Sanjive%20resume.pdf"
+             class="btn-secondary" target="_blank" download>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download Resume
+          </a>
+        </div>
+      </div>
 
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <div class="skills-list" id="skillsList">
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <ul class="logo-list">
-                    <li data-skill="Java"><span class="logo-placeholder"></span> <span>Java</span></li>
-                    <li data-skill="Java8"><span class="logo-placeholder"></span> <span>Java 8</span></li>
-                    <li data-skill="MySQL"><span class="logo-placeholder"></span> <span>MySQL</span></li>
-                    <li data-skill="JavaScript"><span class="logo-placeholder"></span> <span>JavaScript</span></li>
-                    <li data-skill="React"><span class="logo-placeholder"></span> <span>React</span></li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Frameworks & Technologies</h3>
-                <ul class="logo-list">
-                    <li data-skill="SpringBoot"><span class="logo-placeholder"></span> <span>Spring Boot</span></li>
-                    <li data-skill="Hibernate"><span class="logo-placeholder"></span> <span>Hibernate</span></li>
-                    <li data-skill="Microservices"><span class="logo-placeholder"></span> <span>Microservices</span></li>
-                    <li data-skill="RESTfulAPI"><span class="logo-placeholder"></span> <span>RESTful API</span></li>
-                    <li data-skill="AWS"><span class="logo-placeholder"></span> <span>AWS</span></li>
-                </ul>
-            </div>
-            </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>I'm currently exploring new opportunities and would love to connect. Feel free to reach out!</p>
-        <p><strong>Email:</strong> <a href="mailto:sanjivesubramaniam4154@gmail.com">sanjivesubramaniam4154@gmail.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+919344836317">+91 9344836317</a></p>
-        <form action="#" method="POST">
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="container">
+      <p class="section-label mono"><span class="prompt">$</span> cat about.md</p>
+      <h2 class="section-title">About<br/><em>Me</em></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a <strong>Backend Java Developer</strong> with 3.5+ years of hands-on experience building scalable, production-grade systems. Specialised in REST API design, microservices architecture, database optimisation, and cloud deployment.</p>
+          <p>Currently at <strong>Net Connect Global</strong> on a BNP Paribas fintech project. Previously Software Engineer at <strong>Infosys</strong> (Oct 2022 – Apr 2025). Based in <strong>Chennai, Tamil Nadu</strong>.</p>
+          <p>Actively seeking <strong>product-based company</strong> roles where I can own features end-to-end, solve real scale problems, and grow as an engineer. Sharpening DSA, System Design, and advanced Java daily.</p>
+
+          <div class="target-box">
+            <p class="target-label mono"><span class="prompt">$</span> ./job-search --status</p>
+            <div class="target-tags">
+              <span>✓ Open to Work</span>
+              <span>Java Developer</span>
+              <span>SDE-2 / Backend Engineer</span>
+              <span>Bangalore · Hyderabad · Chennai · Remote</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">3.5<small>+</small></span>
+            <span class="stat-label mono">yrs_experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">2</span>
+            <span class="stat-label mono">companies</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">15<small>+</small></span>
+            <span class="stat-label mono">technologies</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">∞</span>
+            <span class="stat-label mono">curiosity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <p class="section-label mono"><span class="prompt">$</span> ls -la skills/</p>
+      <h2 class="section-title">Tech<br/><em>Stack</em></h2>
+
+      <div class="skills-note mono">// Skills assessed by product companies at SDE-2 level — grouped by interview domain</div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-badge badge-core">core</span>
+            <h3>Core Java & Advanced Java</h3>
+          </div>
+          <ul class="skill-tags">
+            <li><span class="tag-bullet">›</span>Java 8 — Streams, Lambdas, Optional</li>
+            <li><span class="tag-bullet">›</span>Java 11 / 17 features</li>
+            <li><span class="tag-bullet">›</span>Multithreading & Concurrency</li>
+            <li><span class="tag-bullet">›</span>Collections Framework internals</li>
+            <li><span class="tag-bullet">›</span>JVM Internals & GC Tuning</li>
+            <li><span class="tag-bullet">›</span>Functional Interfaces & Generics</li>
+          </ul>
+        </div>
+
+        <div class="skill-card skill-hot">
+          <div class="skill-card-header">
+            <span class="skill-badge badge-hot">!! critical</span>
+            <h3>Data Structures & Algorithms</h3>
+          </div>
+          <ul class="skill-tags">
+            <li><span class="tag-bullet">›</span>Arrays, Strings, HashMaps</li>
+            <li><span class="tag-bullet">›</span>Linked Lists, Stacks, Queues</li>
+            <li><span class="tag-bullet">›</span>Trees & Binary Search Trees</li>
+            <li><span class="tag-bullet">›</span>Graphs — BFS, DFS, Dijkstra</li>
+            <li><span class="tag-bullet">›</span>Dynamic Programming</li>
+            <li><span class="tag-bullet">›</span>Sliding Window, Two Pointers</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-badge badge-core">framework</span>
+            <h3>Spring Ecosystem</h3>
+          </div>
+          <ul class="skill-tags">
+            <li><span class="tag-bullet">›</span>Spring Boot 3.x</li>
+            <li><span class="tag-bullet">›</span>Spring Security (JWT, OAuth2)</li>
+            <li><span class="tag-bullet">›</span>Spring Data JPA / Hibernate</li>
+            <li><span class="tag-bullet">›</span>Spring Cloud — Config, Gateway</li>
+            <li><span class="tag-bullet">›</span>Spring AOP & Spring Batch</li>
+            <li><span class="tag-bullet">›</span>Feign Client, RestTemplate</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-badge badge-core">arch</span>
+            <h3>Microservices</h3>
+          </div>
+          <ul class="skill-tags">
+            <li><span class="tag-bullet">›</span>Microservices Design Patterns</li>
+            <li><span class="tag-bullet">›</span>API Gateway & Service Discovery</li>
+            <li><span class="tag-bullet">›</span>Circuit Breaker (Resilience4j)</li>
+            <li><span class="tag-bullet">›</span>Saga Pattern — Choreography / Orchestration</li>
+            <li><span class="tag-bullet">›</span>Distributed Tracing (Zipkin)</li>
+            <li><span class="tag-bullet">›</span>Event-Driven Architecture</li>
+          </ul>
+        </div>
+
+        <div class="skill-card skill-hot">
+          <div class="skill-card-header">
+            <span class="skill-badge badge-hot">!! critical</span>
+            <h3>System Design</h3>
+          </div>
+          <ul class="skill-tags">
+            <li><span class="tag-bullet">›</span>High Level Design (HLD)</li>
+            <li><span class="tag-bullet">›</span>Low Level Design (LLD)</li>
+            <li><span class="tag-bullet">›</span>SOLID Principles & GOF Patterns</li>
+            <li><span class="tag-bullet">›</span>Scalability & Load Balancing</li>
+            <li><span class="tag-bullet">›</span>CAP Theorem, Consistency Models</li>
+            <li><span class="tag-bullet">›</span>Rate Limiting, Caching Strategy</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-badge badge-core">db</span>
+            <h3>Databases</h3>
+          </div>
+          <ul class="skill-tags">
+            <li><span class="tag-bullet">›</span>MySQL / PostgreSQL</li>
+            <li><span class="tag-bullet">›</span>Complex SQL & Query Optimisation</li>
+            <li><span class="tag-bullet">›</span>Indexing & Execution Plans</li>
+            <li><span class="tag-bullet">›</span>MongoDB (NoSQL)</li>
+            <li><span class="tag-bullet">›</span>Redis — Caching & Sessions</li>
+            <li><span class="tag-bullet">›</span>DB Sharding & Replication</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-badge badge-core">msg</span>
+            <h3>Messaging & Streaming</h3>
+          </div>
+          <ul class="skill-tags">
+            <li><span class="tag-bullet">›</span>Apache Kafka — Producer / Consumer</li>
+            <li><span class="tag-bullet">›</span>Topics, Partitions, Consumer Groups</li>
+            <li><span class="tag-bullet">›</span>Dead Letter Queue (DLQ)</li>
+            <li><span class="tag-bullet">›</span>Idempotent Consumers</li>
+            <li><span class="tag-bullet">›</span>RabbitMQ basics</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-badge badge-cloud">cloud</span>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <ul class="skill-tags">
+            <li><span class="tag-bullet">›</span>AWS — EC2, S3, RDS, Lambda</li>
+            <li><span class="tag-bullet">›</span>Docker & Containerisation</li>
+            <li><span class="tag-bullet">›</span>Kubernetes (basics)</li>
+            <li><span class="tag-bullet">›</span>CI/CD — Jenkins, GitHub Actions</li>
+            <li><span class="tag-bullet">›</span>Prometheus + Grafana</li>
+            <li><span class="tag-bullet">›</span>ELK Stack — Logging</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-badge badge-core">qa</span>
+            <h3>Testing & Best Practices</h3>
+          </div>
+          <ul class="skill-tags">
+            <li><span class="tag-bullet">›</span>JUnit 5 — Unit Testing</li>
+            <li><span class="tag-bullet">›</span>Mockito — Mocking</li>
+            <li><span class="tag-bullet">›</span>Integration Testing</li>
+            <li><span class="tag-bullet">›</span>Clean Code & Code Reviews</li>
+            <li><span class="tag-bullet">›</span>Agile / Scrum</li>
+            <li><span class="tag-bullet">›</span>REST API Best Practices</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <p class="section-label mono"><span class="prompt">$</span> git log --oneline</p>
+      <h2 class="section-title">Work<br/><em>History</em></h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Developer</h3>
+                <p class="timeline-company">Net Connect Global <span class="timeline-client">· BNP Paribas (Fintech)</span></p>
+              </div>
+              <span class="timeline-date mono">Jun 2025 – Present</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Building scalable backend services for BNP Paribas fintech platform using Spring Boot and microservices architecture</li>
+              <li>Working with REST APIs, database design, and third-party service integrations in the banking domain</li>
+              <li>Collaborating in Agile sprints, participating in code reviews and technical design discussions</li>
+            </ul>
+            <div class="timeline-tech">
+              <span>Java</span><span>Spring Boot</span><span>Microservices</span><span>MySQL</span><span>REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Software Engineer</h3>
+                <p class="timeline-company">Infosys</p>
+              </div>
+              <span class="timeline-date mono">Oct 2022 – Apr 2025</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Developed and maintained robust backend applications using Java, Spring Boot, and REST APIs</li>
+              <li>Built microservices and integrated external APIs, reducing processing time via optimised SQL queries</li>
+              <li>Implemented Python-based Generative AI features integrated with existing Java services</li>
+              <li>Worked on Hibernate ORM, database management, and delivered in Agile methodology</li>
+            </ul>
+            <div class="timeline-tech">
+              <span>Java 8</span><span>Spring Boot</span><span>Hibernate</span><span>MySQL</span><span>REST API</span><span>Python</span><span>AWS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <p class="section-label mono"><span class="prompt">$</span> ssh contact@sanjive.dev</p>
+      <h2 class="section-title">Get in<br/><em>Touch</em></h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-lead">I'm actively looking for backend engineering roles at product companies. Open to referrals, opportunities, or just a good tech conversation.</p>
+          <div class="contact-methods">
+            <a href="mailto:sanjivesubramaniam4154@gmail.com" class="contact-method">
+              <span class="method-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <div>
+                <span class="method-label mono">email</span>
+                <span class="method-value">sanjivesubramaniam4154@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+919344836317" class="contact-method">
+              <span class="method-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </span>
+              <div>
+                <span class="method-label mono">phone</span>
+                <span class="method-value">+91 9344836317</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/sanjive-subramaniam/" target="_blank" class="contact-method">
+              <span class="method-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </span>
+              <div>
+                <span class="method-label mono">linkedin</span>
+                <span class="method-value">sanjive-subramaniam</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+              <label for="fname" class="mono">// name</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" required />
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+              <label for="femail" class="mono">// email</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" required />
             </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="button">Send Message</button>
+          </div>
+          <div class="form-group">
+            <label for="fmessage" class="mono">// message</label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="Opportunity, referral, or just a hello..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
         </form>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Sanjive. All rights reserved.</p>
-    </footer>
+  <footer>
+    <div class="container footer-inner">
+      <span class="logo"><span class="logo-bracket">{</span>SJ<span class="logo-bracket">}</span></span>
+      <p class="mono">// sanjive subramaniam · backend java developer · open to work</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/sanjive-subramaniam/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/sanjive05" target="_blank">GitHub</a>
+        <a href="https://leetcode.com/u/sanjive05/" target="_blank">LeetCode</a>
+      </div>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const resumeUrl = 'https://github.com/sanjive05/resume/blob/main/Sanjive%20resume.pdf'; // Replace with your GitHub raw resume URL
-            const resumeLink = document.getElementById('resumeLink');
-            const heroResumeLink = document.getElementById('heroResumeLink');
-
-            if (resumeLink) {
-                resumeLink.href = resumeUrl;
-            }
-            if (heroResumeLink) {
-                heroResumeLink.href = resumeUrl;
-            }
-        });
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
